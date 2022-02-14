@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Download Image Instagram</title>
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous" />
+		<link rel="stylesheet" href="assets/css/index.css" />
+	</head>
+	<body>
+		<div class="container mt-3">
+			<div class="row">
+				<div class="col-lg-6 col-12">
+					<div class="card shadow">
+						<div class="card-body">
+							<form action="">
+								<div class="mb-3">
+									<label for="url" class="form-label"
+										>Url Instagram cần download
+										<span style="color: red">*</span></label
+									>
+									<input
+										type="text"
+										class="form-control"
+										id="url"
+										placeholder="vd: https://www.instagram.com/lybra.lybikini/" />
+								</div>
+
+								<div class="mb-3">
+									<label for="soluong" class="form-label"
+										>Số lượng ảnh muốn download
+										<span style="color: red">*</span></label
+									>
+									<input
+										type="text"
+										class="form-control"
+										id="soluong"
+										placeholder="vd: 30" />
+								</div>
+
+								<div class="mb-3">
+									<label for="widthResize" class="form-label"
+										>Chiều rộng Resize, mặc định 740</label
+									>
+									<input
+										type="text"
+										class="form-control"
+										id="widthResize"
+										placeholder="vd: 740" />
+								</div>
+
+								<div class="mb-3">
+									<label for="heighResize" class="form-label"
+										>Chiều cao Resize, mặc định 430</label
+									>
+									<input
+										type="text"
+										class="form-control"
+										id="heighResize"
+										placeholder="vd: 430" />
+								</div>
+
+								<button class="btn btn-primary" id="btn">
+									Download
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="card shadow">
+						<div class="card-header">Folder Download</div>
+						<div class="card-body">
+							<span
+								><img src="./folder.png" alt="_folder" />
+								Download</span
+							>
+							<ul id="listFolder"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Button trigger modal -->
+		<!-- <button
+			type="button"
+			class="btn btn-primary"
+			data-bs-toggle="modal"
+			data-bs-target="#modalConfirm">
+			Launch demo modal
+		</button> -->
+
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="modalConfirm"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">
+							Xác nhận
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">Bạn có chắc muốn xóa thư mục này không?</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-bs-dismiss="modal">
+							Đóng
+						</button>
+						<button type="button" class="btn btn-danger">
+							Xóa
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./assets/js/bootstrap.bundle.min.js"></script>
+		<script script-src="self" src="./assets/js/main.js"></script>
+	</body>
+</html>

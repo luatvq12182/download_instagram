@@ -1,0 +1,19 @@
+body {
+    background-color: gainsboro;
+}
+
+#listFolder {
+    list-style: none;
+}
+
+#listFolder {
+    cursor: pointer;
+}
+
+#listFolder li img{
+    transition: .2s;
+}
+
+#listFolder li img:hover{
+    opacity: .6;
+}
