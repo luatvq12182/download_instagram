@@ -123,10 +123,13 @@ router.post('/download', validate, convertStringToNumber, async (req, res) => {
 		const { page, browser } = await Util.createPagePuppeteer(false);
 
 		let srcs = [];
+		let count = 0;
 
 		await page.goto(url);
 
-		while (srcs.length < soluong) {
+		while (srcs.length < soluong && count < 50) {
+			count++;
+			
 			await Util.scrollPage(page);
 
 			fetchSrcs = await page.evaluate(async () => {
